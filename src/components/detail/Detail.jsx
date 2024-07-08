@@ -1,20 +1,20 @@
 import "./style.css";
 
-function Detail({ ingredients, steps }) {
+function Detail(props) {
   return (
     <div className="container">
       <p>Ingredients</p>
       <ul>
-        {ingredients.map((item, index) => (
-          <li key={`ingredient-${index}`}>
+        {props.ingredients.map((item, index) => (
+          <li key={"ingredient " + index}>
             {item.qty} {item.name}
           </li>
         ))}
       </ul>
       <p>Directions</p>
       <ol>
-        {steps.map((item, index) => (
-          <li key={`step-${index}`}>{item}</li>
+        {props.steps.map((item, index) => (
+          <li key={"step " + index}>{item}</li>
         ))}
       </ol>
     </div>
