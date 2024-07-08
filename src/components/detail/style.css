@@ -1,0 +1,10 @@
+.container {
+  border: 1px solid grey;
+  border-radius: 8px;
+  width: 304px;
+  padding: 4px 8px;
+}
+
+p {
+  font-weight: bold;
+}
