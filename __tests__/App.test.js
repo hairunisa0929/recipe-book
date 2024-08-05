@@ -38,3 +38,32 @@ it("Card component receives and renders the steps", () => {
     expect(screen.getByText(step)).toBeInTheDocument();
   });
 });
+
+it("Check if the View Recipe button is rendered",  () => {
+    render(<Card recipe={recipes[0]} />);
+    const buttonElement = screen.getByText('View Recipe');
+    expect(buttonElement).toBeInTheDocument();
+  })
+  
+  it("Check Detail component is not rendered initially",  () => {
+    render(<Card recipe={recipes[0]} />);
+    expect(screen.queryByText('Ingredients')).not.toBeInTheDocument();
+  })
+  
+  it("toggles the Detail component when button is clicked", () => {
+    render(<Card recipe={recipes[0]} />);
+  
+    const buttonView = screen.getByText('View Recipe');
+  
+    // Click to show the Detail component
+    fireEvent.click(buttonView);
+    expect(screen.getByText('Hide Recipe')).toBeInTheDocument();
+    expect(screen.getByText('Ingredients')).toBeInTheDocument();
+  
+    const buttonHide = screen.getByText('Hide Recipe');
+  
+    // Click to hide the Detail component
+    fireEvent.click(buttonHide);
+    expect(screen.getByText('View Recipe')).toBeInTheDocument();
+    expect(screen.queryByText('Ingredients')).not.toBeInTheDocument();
+  });
