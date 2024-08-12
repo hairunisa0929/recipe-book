@@ -1,0 +1,26 @@
+Anda akan melanjutkan recipe book yang telah dibuat pada tugas sebelumnya. Pada tugas kali ini, Anda akan menambahkan state untuk menampilkan dan menyembunyikan resep dari masing-masing makanan saat mengklik button.
+
+
+
+Berikuti tampilan website yang akan Anda buat:
+
+
+
+Saat detail recipe dihide:
+
+
+
+
+
+Saat detail dishow:
+
+
+
+
+
+Instruksi:
+
+Pada komponen Card, buatlah openDetail dan setOpenDetail untuk mengatur nilai state tersebut. State tersebut memiliki initial value false.
+Buatlah function onClick pada tag <button> yang berupa arrow function untuk mengatur nilai state openDetail. Gunakan setState dan negation (!not).
+Kemudian buatlah ternary operator untuk mengatur teks pada tag <button>. Saat openDetail bernilai true maka akan menampilkan "Hide" dan saat bernilai false maka akan menampilkan "VIew" Recipe.
+Buat juga conditional rendering untuk menampilkan komponen detail saat openDetail bernilai true. Gunakanlah operator && (and).

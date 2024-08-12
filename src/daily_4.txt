@@ -1,0 +1,29 @@
+Anda akan membuat sebuah tampilan website recipe book menggunakan React. Pada website tersebut, Anda dapat melihat gambar, nama makanan, bahan-bahan, serta langkah-langkah memasaknya. Terdapat 3 data resep dari Spaghetti, Lasagna, dan Pizza.
+
+
+
+Berikut tampilan website yang akan Anda buat:
+
+
+
+
+
+Instruksi:
+
+Komponen App:
+
+Dalam App.jsx, mapping data recipes ke dalam Card.
+Masukkan data tiap recipe sebagai props recipe pada Card tersebut. Jangan lupa untuk memberi key berupa recipe.id.
+
+
+Komponen Card:
+
+Dalam Card.js, masukkan gambar dari props image pada tag <img>.
+Pada tag <span> dengan className "title", masukkan props name.
+Masukkan data props ingredients dan props steps sebagai props ingredients dan steps pada komponen Detail.
+
+
+Komponen Detail:
+
+Dalam Detail.js, buatlah unordered list untuk mapping props ingredients. Tiap item akan menampilkan data qty dan name. Tiap item list memiliki key {"ingredient " + index}.
+Buat juga sebuah ordered list untuk mapping props steps yang berisi data step itu sendiri. Tiap item memiliki key {"step " + index}.
